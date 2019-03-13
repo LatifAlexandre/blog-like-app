@@ -6,10 +6,6 @@
     <h3>{{post.title}}</h3>
     <h5>{{post.created_at | date: 'short'}}</h5>
     <h6>{{post.content}}</h6>
-    <!--
-        <h4>Machine : {{ machineName }} -- Status : {{ getStatusString() }} -- Last updated : {{ lastUpdate | async | date: 'EE d/MM/y à HH:mm' | uppercase}}</h4>
-        <h4>[ngStyle]="{color: getColor()}"
-    -->
     <button class="btn btn-success" (click)="onLoveIt()">
             Love it
     </button>
