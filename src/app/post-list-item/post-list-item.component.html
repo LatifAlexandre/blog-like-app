@@ -3,8 +3,13 @@
                 'list-group-item-success': post.loveIts>0,
                 'list-group-item-danger': post.loveIts<0}">
 
-    <h3>{{post.title}}</h3>
-    <h5>{{post.created_at | date: 'short'}}</h5>
+    <h3>
+        {{post.title}}
+        <button class="btn btn-default pull-right" (click)="onRemove()">
+                <span class="glyphicon glyphicon-trash"></span>
+        </button>
+    </h3>
+    <h5>{{post.created_at | date: 'medium'}}</h5>
     <h6>{{post.content}}</h6>
     <button class="btn btn-success" (click)="onLoveIt()">
             Love it

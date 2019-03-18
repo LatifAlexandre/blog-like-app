@@ -1,5 +1,3 @@
-import { POST_LIST } from './posts-mock';
-import { Post } from './model/post';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  posts = POST_LIST;
-}
+export class AppComponent {}
