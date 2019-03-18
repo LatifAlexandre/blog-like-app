@@ -2,11 +2,18 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li routerLinkActive="active">
-        <a routerLink="posts">Posts</a>
+        <a routerLink="posts">{{ 'header.posts' | translate }}</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="new">Add post</a>
+        <a routerLink="new">{{ 'header.newPost' | translate }}</a>
       </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <div *ngFor="let lang of translate.langs">
+          <li id='langItem' *ngIf="lang !== translate.currentLang">
+              <a id='langLink' (click)="changeLanguage(lang)">{{lang | uppercase}}</a>
+          </li>
+      </div>
     </ul>
   </div>
 </nav>

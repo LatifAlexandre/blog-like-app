@@ -1,21 +1,21 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-    <h2>Create a new Post</h2>
+    <h2>{{ 'add-post.title' | translate }}</h2>
     <form [formGroup]="addPostForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label>Title</label>
+        <label>{{ 'add-post.form.title' | translate }}</label>
         <input type="text" class="form-control" formControlName="title">
       </div>
       <div class="form-group">
-        <label>Content</label>
+        <label>{{ 'add-post.form.content' | translate }}</label>
         <input type="text" class="form-control" formControlName="content">
       </div>
       <div class="form-group">
-        <label>Return to posts list after creation</label>
+        <label>{{ 'add-post.form.redirectToPosts' | translate }}</label>
         <input type="checkbox" formControlName="redirect">
       </div>
       <button type="submit" class="btn btn-success" [disabled]="addPostForm.invalid">
-        Create
+          {{ 'add-post.form.submit' | translate }}
       </button>
     </form>
   </div>

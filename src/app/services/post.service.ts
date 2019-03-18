@@ -1,5 +1,4 @@
 import { Post } from './../model/post';
-import { POST_LIST } from './../posts-mock';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import * as firebase from 'firebase';

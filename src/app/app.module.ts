@@ -9,13 +9,20 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { AddPostComponent } from './add-post/add-post.component';
 import { HeaderComponent } from './header/header.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 const ROUTES: Routes = [
   { path: 'posts', component: PostListComponent},
   { path: 'new', component: AddPostComponent},
   { path: '', redirectTo: 'posts', pathMatch: 'full'},
   { path: '**', redirectTo: 'posts'}
-]
+];
 
 @NgModule({
   declarations: [
@@ -30,6 +37,13 @@ const ROUTES: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     RouterModule.forRoot(ROUTES)
   ],
   providers: [

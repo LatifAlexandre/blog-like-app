@@ -1,0 +1,21 @@
+{
+    "post-item": {
+        "loveIt": "Love it",
+        "hateIt": "Hate it"
+    },
+    "post-list": {
+        "posts" : "Posts"
+    },
+    "header": {
+        "posts": "Posts",
+        "newPost": "Add post"
+    }, "add-post": {
+        "title" : "Create a new Post",
+        "form": {
+            "title": "Title",
+            "content": "Content",
+            "redirectToPosts": "Return to posts list after creation",
+            "submit": "Create"
+        }
+    }
+}

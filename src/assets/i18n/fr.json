@@ -1,0 +1,21 @@
+{
+    "post-item": {
+        "loveIt": "Aimer",
+        "hateIt": "Détester"
+    },
+    "post-list": {
+        "posts": "Publications"
+    },
+    "header": {
+        "posts": "Publications",
+        "newPost": "Ajouter une publication"
+    }, "add-post": {
+        "title": "Créer une nouvelle publication",
+        "form": {
+            "title": "Titre",
+            "content": "Contenu",
+            "redirectToPosts": "Retourner à la liste des publications après la création",
+            "submit": "Créer"
+        }
+    }
+}
