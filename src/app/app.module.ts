@@ -9,7 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { AddPostComponent } from './add-post/add-post.component';
 import { HeaderComponent } from './header/header.component';
-
+import { HttpClientModule } from '@angular/common/http';
 const ROUTES: Routes = [
   { path: 'posts', component: PostListComponent},
   { path: 'new', component: AddPostComponent},
@@ -29,6 +29,7 @@ const ROUTES: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
