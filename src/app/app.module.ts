@@ -12,9 +12,10 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { Config } from './app.config';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
 
 const ROUTES: Routes = [
@@ -47,6 +48,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
+    Config,
     PostService
   ],
   bootstrap: [AppComponent]
