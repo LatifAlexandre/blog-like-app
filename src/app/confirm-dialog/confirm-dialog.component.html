@@ -1,0 +1,15 @@
+<div class='dialog'>
+  <header>
+    <h3>{{ titleKey | translate }}</h3> 
+    <i class='fa fa-close'></i>
+  </header>
+  <div class='dialog-msg'>
+    <p>{{ messageKey | translate }}</p> 
+  </div>
+  <footer>
+    <div class='controls'>
+      <button class='button button-danger doAction pull-right' (click)="onConfirm()">{{ confirmKey | translate }}</button> 
+      <button class='button button-default cancelAction pull-left' (click)="onCancel()">{{ cancelKey | translate }}</button> 
+    </div>
+  </footer>
+</div>

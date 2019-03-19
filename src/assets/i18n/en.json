@@ -1,7 +1,13 @@
 {
     "post-item": {
         "loveIt": "Love it",
-        "hateIt": "Hate it"
+        "hateIt": "Hate it",
+        "confirm-dialog": {
+            "title" : "Remove post",
+            "message": "Are you sure you want to delete this post ?",
+            "confirm": "Yes, remove",
+            "cancel": "Cancel"
+        }
     },
     "post-list": {
         "posts" : "Posts"

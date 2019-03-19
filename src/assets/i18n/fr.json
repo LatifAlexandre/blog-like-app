@@ -1,7 +1,13 @@
 {
     "post-item": {
         "loveIt": "Aimer",
-        "hateIt": "Détester"
+        "hateIt": "Détester",
+        "confirm-dialog": {
+            "title" : "Supprimer la publication",
+            "message": "Êtes-vous sûr de vouloir supprimer cette publication ?",
+            "confirm": "Oui, supprimer",
+            "cancel": "Annuler"
+        }
     },
     "post-list": {
         "posts": "Publications"

@@ -1,3 +1,5 @@
+import { ModalService } from './services/modal.service';
+import { DomService } from './services/dom.service';
 import { PostService } from './services/post.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,6 +15,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Config } from './app.config';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
@@ -31,7 +34,8 @@ const ROUTES: Routes = [
     PostListComponent,
     PostListItemComponent,
     AddPostComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,12 @@ const ROUTES: Routes = [
   ],
   providers: [
     Config,
-    PostService
+    PostService,
+    DomService,
+    ModalService
+  ],
+  entryComponents: [
+    ConfirmDialogComponent
   ],
   bootstrap: [AppComponent]
 })

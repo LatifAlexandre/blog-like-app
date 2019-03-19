@@ -1,3 +1,4 @@
+import { ModalService } from './services/modal.service';
 import { Component } from '@angular/core';
 import * as firebase from 'firebase';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,6 +12,7 @@ import { Config } from './app.config';
 export class AppComponent {
 
   constructor(
+    private modalService: ModalService,
     translateService: TranslateService,
     config: Config
     ) {
@@ -21,6 +23,10 @@ export class AppComponent {
     translateService.use('en');
 
     this.initFirebase();
+  }
+
+  removeModal() {
+    this.modalService.destroy();
   }
 
   initFirebase() {
